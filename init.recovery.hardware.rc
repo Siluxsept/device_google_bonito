@@ -16,6 +16,18 @@ on init
     setprop sys.usb.configfs 1
     # Enable thermal mitigation
     write /sys/devices/virtual/thermal/tz-by-name/backup-charge/mode enabled
+    start touchdriver
+
+service touchdriver /sbin/touchdriver.sh
+    oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+service ldconfigtxt /sbin/touch /sbin/ld.config.txt
+    oneshot
+    seclabel u:r:recovery:s0
 
 on property:sys.usb.ffs.ready=1
     mkdir /config/usb_gadget/g1/configs/b.1 0777 shell shell

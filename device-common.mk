@@ -116,6 +116,15 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_product=ext4 \
     POSTINSTALL_OPTIONAL_product=false \
 
+#touch modules
+PRODUCT_COPY_FILES += \
+    device/google/bonito/prebuilts/ld.config.txt:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/ld.config.txt \
+    device/google/bonito/modules/synaptics_dsx_core.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_core.ko \
+    device/google/bonito/modules/synaptics_dsx_fw_update.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_fw_update.ko \
+    device/google/bonito/modules/synaptics_dsx_rmi_dev.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_rmi_dev.ko \
+    device/google/bonito/modules/synaptics_dsx_test_reporting.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_test_reporting.ko \
+    device/google/bonito/touchdriver.sh:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/touchdriver.sh
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.use_color_management=true
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.protected_contents=true
 
