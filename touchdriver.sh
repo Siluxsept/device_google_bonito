@@ -1,7 +1,7 @@
 #!/sbin/sh
 
 fastboot=$(getprop ro.boot.bootreason | cut -d, -F2)
-if [[ $fastboot == bootloader ]]
+if [[ $fastboot == bootloader || $fastboot == "reboot,longkey" ]]
 then
 	insmod /sbin/synaptics_dsx_core.ko
 	insmod /sbin/synaptics_dsx_fw_update.ko
