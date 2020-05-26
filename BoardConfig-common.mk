@@ -88,8 +88,20 @@ TARGET_RECOVERY_WIPE := device/google/bonito/recovery.wipe
 TARGET_RECOVERY_FSTAB := device/google/bonito/fstab.hardware
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_LIB := \
-    librecovery_ui_pixel \
+    librecovery_ui_bonito \
+    libnos_citadel_for_recovery \
+    libnos_for_recovery \
+    libbootloader_message \
     libfstab
+
+TARGET_RECOVERY_TWRP_LIB := \
+    librecovery_twrp_bonito \
+    libnos_citadel_for_recovery \
+    libnos_for_recovery \
+    liblog \
+    libbootloader_message \
+    libfstab \
+    libext4_utils
 
 # system.img
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
