@@ -160,6 +160,7 @@ PRODUCT_COPY_FILES += \
     device/google/bonito/prebuilts/android.hardware.oemlock@1.0.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.oemlock@1.0.so \
     device/google/bonito/prebuilts/nos_app_weaver.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/nos_app_weaver.so \
     device/google/bonito/prebuilts/libnos_citadeld_proxy.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnos_citadeld_proxy.so \
+    device/google/bonito/prebuilts/libnos.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnos.so \
     device/google/bonito/prebuilts/libnos_datagram_citadel.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnos_datagram_citadel.so\
     device/google/bonito/prebuilts/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libprotobuf-cpp-full.so \
     device/google/bonito/prebuilts/pixelpowerstats_provider_aidl_interface-cpp.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/pixelpowerstats_provider_aidl_interface-cpp.so \

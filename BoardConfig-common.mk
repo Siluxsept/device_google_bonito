@@ -263,10 +263,9 @@ AB_OTA_UPDATER := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/strace 
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += out/target/product/$(PRODUCT_HARDWARE)/vendor/lib/hw/bootctrl.sdm710.so
-TW_RECOVERY_ADDITIONAL_RELINK_FILES += out/target/product/$(PRODUCT_HARDWARE)/vendor/lib/hw/bootctrl.sdm710.so
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/crash_dump32
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/crash_dump64
-TARGET_RECOVERY_DEVICE_MODULES += strace bootctrl.sdm710 crash_dump
+TARGET_RECOVERY_DEVICE_MODULES += strace bootctrl.sdm710 crash_dump magiskboot_arm
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 # MTP will not work until we update it to support ffs
@@ -275,3 +274,5 @@ TW_USE_TOOLBOX := true
 #TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
 TW_NO_HAPTICS := true
 TW_NO_BIND_SYSTEM := true
+TW_INCLUDE_REPACKTOOLS := true
+TW_EXTRA_LANGUAGES := true
