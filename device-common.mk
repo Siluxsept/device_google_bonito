@@ -118,46 +118,46 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 #touch modules
 PRODUCT_COPY_FILES += \
-    device/google/bonito/prebuilts/ld.config.txt:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/ld.config.txt \
-    device/google/bonito/modules/synaptics_dsx_core.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_core.ko \
-    device/google/bonito/modules/synaptics_dsx_fw_update.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_fw_update.ko \
-    device/google/bonito/modules/synaptics_dsx_rmi_dev.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_rmi_dev.ko \
-    device/google/bonito/modules/synaptics_dsx_test_reporting.ko:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/synaptics_dsx_test_reporting.ko \
-    device/google/bonito/touchdriver.sh:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/touchdriver.sh \
-    device/google/bonito/prebuilts/qseecomd:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/qseecomd \
-    device/google/bonito/prebuilts/libdrmfs.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libdrmfs.so \
-    device/google/bonito/prebuilts/libxml2.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libxml2.so \
-    device/google/bonito/prebuilts/libnetd_client.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnetd_client.so \
-    device/google/bonito/prebuilts/libspcom.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libspcom.so \
-    device/google/bonito/prebuilts/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libkeymasterdeviceutils.so \
-    device/google/bonito/prebuilts/libgptutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libgptutils.so \
-    device/google/bonito/prebuilts/libkeymasterutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libkeymasterutils.so \
-    device/google/bonito/prebuilts/libqtikeymaster4.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libqtikeymaster4.so \
-    device/google/bonito/prebuilts/libQSEEComAPI.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libQSEEComAPI.so \
-    device/google/bonito/prebuilts/libdiag.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libdiag.so \
-    device/google/bonito/prebuilts/libnos_client_citadel.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnos_client_citadel.so \
-    device/google/bonito/prebuilts/libnos_transport.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnos_transport.so \
-    device/google/bonito/prebuilts/citadeld:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/citadeld \
-    device/google/bonito/prebuilts/prepdecrypt.sh:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/prepdecrypt.sh \
-    device/google/bonito/prebuilts/time_daemon:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/time_daemon \
-    device/google/bonito/prebuilts/libqmi_cci.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libqmi_cci.so \
-    device/google/bonito/prebuilts/libqmi_common_so.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libqmi_common_so.so \
+    device/google/bonito/prebuilts/ld.config.txt:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/ld.config.txt \
+    device/google/bonito/modules/synaptics_dsx_core.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/synaptics_dsx_core.ko \
+    device/google/bonito/modules/synaptics_dsx_fw_update.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/synaptics_dsx_fw_update.ko \
+    device/google/bonito/modules/synaptics_dsx_rmi_dev.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/synaptics_dsx_rmi_dev.ko \
+    device/google/bonito/modules/synaptics_dsx_test_reporting.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/synaptics_dsx_test_reporting.ko \
+    device/google/bonito/touchdriver.sh:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/touchdriver.sh \
+    device/google/bonito/prebuilts/qseecomd:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/qseecomd \
+    device/google/bonito/prebuilts/libdrmfs.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libdrmfs.so \
+    device/google/bonito/prebuilts/libxml2.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libxml2.so \
+    device/google/bonito/prebuilts/libnetd_client.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libnetd_client.so \
+    device/google/bonito/prebuilts/libspcom.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libspcom.so \
+    device/google/bonito/prebuilts/libkeymasterdeviceutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libkeymasterdeviceutils.so \
+    device/google/bonito/prebuilts/libgptutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libgptutils.so \
+    device/google/bonito/prebuilts/libkeymasterutils.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libkeymasterutils.so \
+    device/google/bonito/prebuilts/libqtikeymaster4.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libqtikeymaster4.so \
+    device/google/bonito/prebuilts/libQSEEComAPI.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libQSEEComAPI.so \
+    device/google/bonito/prebuilts/libdiag.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libdiag.so \
+    device/google/bonito/prebuilts/libnos_client_citadel.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libnos_client_citadel.so \
+    device/google/bonito/prebuilts/libnos_transport.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libnos_transport.so \
+    device/google/bonito/prebuilts/citadeld:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/citadeld \
+    device/google/bonito/prebuilts/prepdecrypt.sh:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/prepdecrypt.sh \
+    device/google/bonito/prebuilts/time_daemon:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/time_daemon \
+    device/google/bonito/prebuilts/libqmi_cci.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libqmi_cci.so \
+    device/google/bonito/prebuilts/libqmi_common_so.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libqmi_common_so.so \
     device/google/bonito/prebuilts/manifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/vintf/manifest.xml \
     device/google/bonito/prebuilts/compatibility_matrix.device.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/vintf/compatibility_matrix.device.xml \
     device/google/bonito/prebuilts/compatibility_matrix.legacy.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/vintf/compatibility_matrix.legacy.xml \
-    device/google/bonito/prebuilts/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.gatekeeper@1.0-service-qti \
-    device/google/bonito/prebuilts/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.keymaster@4.0-service-qti \
-    device/google/bonito/prebuilts/android.hardware.boot@1.0-service:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.boot@1.0-service \
-    device/google/bonito/prebuilts/android.hardware.weaver@1.0-impl.nos.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.weaver@1.0-impl.nos.so \
-    device/google/bonito/prebuilts/android.hardware.weaver@1.0-service.citadel:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.weaver@1.0-service.citadel \
-    device/google/bonito/prebuilts/android.hardware.authsecret@1.0-service.citadel:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.authsecret@1.0-service.citadel \
-    device/google/bonito/prebuilts/android.hardware.authsecret@1.0-impl.nos.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.authsecret@1.0-impl.nos.so \
-    device/google/bonito/prebuilts/android.hardware.oemlock@1.0-service.citadel:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/android.hardware.oemlock@1.0-service.citadel \
-    device/google/bonito/prebuilts/nos_app_weaver.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/nos_app_weaver.so \
-    device/google/bonito/prebuilts/libnos_citadeld_proxy.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnos_citadeld_proxy.so \
-    device/google/bonito/prebuilts/libnos_datagram_citadel.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libnos_datagram_citadel.so\
-    device/google/bonito/prebuilts/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/libprotobuf-cpp-full.so \
-    device/google/bonito/prebuilts/pixelpowerstats_provider_aidl_interface-cpp.so:$(TARGET_COPY_OUT_RECOVERY)/root/sbin/pixelpowerstats_provider_aidl_interface-cpp.so \
+    device/google/bonito/prebuilts/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.gatekeeper@1.0-service-qti \
+    device/google/bonito/prebuilts/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.keymaster@4.0-service-qti \
+    device/google/bonito/prebuilts/android.hardware.boot@1.0-service:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.boot@1.0-service \
+    device/google/bonito/prebuilts/android.hardware.weaver@1.0-impl.nos.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/android.hardware.weaver@1.0-impl.nos.so \
+    device/google/bonito/prebuilts/android.hardware.weaver@1.0-service.citadel:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.weaver@1.0-service.citadel \
+    device/google/bonito/prebuilts/android.hardware.authsecret@1.0-service.citadel:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.authsecret@1.0-service.citadel \
+    device/google/bonito/prebuilts/android.hardware.authsecret@1.0-impl.nos.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/android.hardware.authsecret@1.0-impl.nos.so \
+    device/google/bonito/prebuilts/android.hardware.oemlock@1.0-service.citadel:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.oemlock@1.0-service.citadel \
+    device/google/bonito/prebuilts/nos_app_weaver.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/nos_app_weaver.so \
+    device/google/bonito/prebuilts/libnos_citadeld_proxy.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libnos_citadeld_proxy.so \
+    device/google/bonito/prebuilts/libnos_datagram_citadel.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libnos_datagram_citadel.so\
+    device/google/bonito/prebuilts/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libprotobuf-cpp-full.so \
+    device/google/bonito/prebuilts/pixelpowerstats_provider_aidl_interface-cpp.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/pixelpowerstats_provider_aidl_interface-cpp.so \
     device/google/bonito/prebuilts/twrp.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.use_color_management=true
