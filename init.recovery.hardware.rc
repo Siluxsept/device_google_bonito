@@ -64,6 +64,7 @@ on init
     # Enable thermal mitigation
     write /sys/devices/virtual/thermal/tz-by-name/backup-charge/mode enabled
     start touchdriver
+    start fastbootd
 
 on property:crypto.ready=0
     stop qseecomd
@@ -205,6 +206,12 @@ service vndservicemanager /system/bin/vndservicemanager /dev/vndbinder
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
+    seclabel u:r:recovery:s0
+
+service fastbootd /system/bin/fastbootd
+    disabled
+    user root
+    group root
     seclabel u:r:recovery:s0
 
 # Weaver services have to be stopped in order to wipe Titan M during a format data

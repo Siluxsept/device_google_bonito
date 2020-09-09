@@ -20,10 +20,12 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_bonito_hwasan.mk \
     $(LOCAL_DIR)/aosp_sargo_hwasan.mk \
     $(LOCAL_DIR)/aicp_bonito.mk \
+    $(LOCAL_DIR)/twrp_bonito.mk \
     $(LOCAL_DIR)/aicp_sargo.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_bonito-userdebug \
     aosp_sargo-userdebug \
     aicp_bonito-userdebug \
+    twrp_bonito-eng \
     aicp_sargo-userdebug

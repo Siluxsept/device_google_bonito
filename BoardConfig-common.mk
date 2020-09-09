@@ -251,6 +251,8 @@ BOARD_PERFSETUP_SCRIPT := platform_testing/scripts/perf-setup/b4s4-setup.sh
 
 -include device/google/bonito/BoardConfigLineage.mk
 
+LZMA_RAMDISK_TARGETS := recovery,boot
+
 # TWRP
 TW_THEME := portrait_hdpi
 BOARD_SUPPRESS_SECURE_ERASE := true
@@ -261,18 +263,17 @@ TW_INCLUDE_CRYPTO := true
 AB_OTA_UPDATER := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/strace
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/lib64/android.hardware.authsecret@1.0.so
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/lib64/android.hardware.oemlock@1.0.so
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/vendor/lib/hw/bootctrl.sdm710.so
-TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/crash_dump32
-TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/crash_dump64
+# TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/crash_dump32
+# TW_RECOVERY_ADDITIONAL_RELINK_BINARY_FILES += out/target/product/$(PRODUCT_HARDWARE)/system/bin/crash_dump64
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 # MTP will not work until we update it to support ffs
 TW_EXCLUDE_MTP := true
 TW_USE_TOOLBOX := true
 #TARGET_RECOVERY_PIXEL_FORMAT := ABGR_8888
-TW_NO_HAPTICS := true
 TW_NO_BIND_SYSTEM := true
 TW_INCLUDE_REPACKTOOLS := true
-#TW_EXTRA_LANGUAGES := true
+TW_NO_HAPTICS := true
+TW_EXTRA_LANGUAGES := true
+TW_INCLUDE_LIBRESETPROP := true
