@@ -890,3 +890,7 @@ include hardware/google/pixel/thermal/device.mk
 
 # power HAL
 -include hardware/google/pixel/power-libperfmgr/aidl/device.mk
+
+#TWRP fastboot
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.expect.baseband=g670-00067-200702-B-6648702

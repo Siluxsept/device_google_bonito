@@ -116,7 +116,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_product=ext4 \
     POSTINSTALL_OPTIONAL_product=false \
 
-#touch modules
+#TWRP files
+    #device/google/coral/prebuilts/fastbootmanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/manifest.xml
 PRODUCT_COPY_FILES += \
     device/google/bonito/prebuilts/ld.config.txt:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/ld.config.txt \
     device/google/bonito/modules/synaptics_dsx_core.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/synaptics_dsx_core.ko \

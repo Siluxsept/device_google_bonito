@@ -64,7 +64,7 @@ on init
     # Enable thermal mitigation
     write /sys/devices/virtual/thermal/tz-by-name/backup-charge/mode enabled
     start touchdriver
-    start fastbootd
+    start vendor.health-2-0
 
 on property:crypto.ready=0
     stop qseecomd
@@ -92,6 +92,12 @@ on property:twrp.apex.loaded=true
    start hwservicemanager
    start prepdecrypt
 
+on property:sys.usb.config=fastboot
+   start servicemanager
+   start hwservicemanager
+   start boot-1-0
+   restart fastbootd
+ 
 on property:prep.decrypt=1
    start vndservicemanager
    start qseecomd
@@ -195,6 +201,11 @@ service vendor.keymaster-4-0-citadel /system/bin/android.hardware.keymaster@4.0-
     group root
     seclabel u:r:recovery:s0
 
+service vendor.health-2-0 /system/bin/android.hardware.health@2.0-service
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
 service vendor.citadeld /system/bin/citadeld
     disabled
     user root
@@ -206,12 +217,6 @@ service vndservicemanager /system/bin/vndservicemanager /dev/vndbinder
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
-    seclabel u:r:recovery:s0
-
-service fastbootd /system/bin/fastbootd
-    disabled
-    user root
-    group root
     seclabel u:r:recovery:s0
 
 # Weaver services have to be stopped in order to wipe Titan M during a format data
