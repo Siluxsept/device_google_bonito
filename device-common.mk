@@ -117,7 +117,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_product=false \
 
 #TWRP files
-    #device/google/coral/prebuilts/fastbootmanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/manifest.xml
 PRODUCT_COPY_FILES += \
     device/google/bonito/prebuilts/ld.config.txt:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/ld.config.txt \
     device/google/bonito/modules/synaptics_dsx_core.ko:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/synaptics_dsx_core.ko \
@@ -144,6 +143,7 @@ PRODUCT_COPY_FILES += \
     device/google/bonito/prebuilts/libqmi_cci.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libqmi_cci.so \
     device/google/bonito/prebuilts/libqmi_common_so.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libqmi_common_so.so \
     device/google/bonito/prebuilts/manifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/vintf/manifest.xml \
+    device/google/bonito/prebuilts/fastbootmanifest.xml:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/manifest.xml  \
     device/google/bonito/prebuilts/compatibility_matrix.device.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/vintf/compatibility_matrix.device.xml \
     device/google/bonito/prebuilts/compatibility_matrix.legacy.xml:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/vintf/compatibility_matrix.legacy.xml \
     device/google/bonito/prebuilts/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.gatekeeper@1.0-service-qti \
