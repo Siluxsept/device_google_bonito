@@ -37,6 +37,8 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 TARGET_BOARD_COMMON_PATH := device/google/bonito/sdm710
 
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
@@ -48,7 +50,8 @@ BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/7c4000.sdhci
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/google/bluecross
 TARGET_KERNEL_CONFIG := bonito_defconfig
@@ -208,6 +211,10 @@ TARGET_HAS_WIDE_COLOR_DISPLAY := false
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DRM_PP := true
+
+# SELinux
+-include device/qcom/sepolicy/SEPolicy.mk
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Vendor Interface Manifest
 DEVICE_MANIFEST_FILE := device/google/bonito/manifest.xml

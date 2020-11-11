@@ -20,8 +20,13 @@
    "branch":      "r11x"
  },
  {
-   "repository":  "android_vendor_pixelgapps",
-   "target_path": "vendor/pixelgapps",
+   "repository":  "DirtyUnicorns/android_vendor_extras",
+   "target_path": "vendor/extras",
    "branch":      "r11x"
+ },
+ {
+   "repository":  "Siluxsept/proprietary_vendor_pixelgapps",
+   "target_path": "vendor/pixelgapps",
+   "branch":      "r11.0"
  }
 ]
