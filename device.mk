@@ -253,6 +253,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libmalistener
 
+# Audio JamesDSP
+PRODUCT_PACKAGES += \
+    JamesDSPManager
+
 # graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610

@@ -1,0 +1,23 @@
+[
+ {
+   "repository":   "device/google/bonito"
+ },
+ {
+   "repository":   "platform/hardware/qcom/sm8150/data/ipacfg-mgr"
+ },
+ {
+   "repository":   "platform/hardware/qcom/sm8150/display"
+ },
+ {
+   "repository":   "platform/hardware/qcom/sm8150/gps"
+ },
+ {
+   "repository":   "platform/hardware/qcom/sm8150/media"
+ },
+ {
+   "repository":   "platform/hardware/qcom/sm8150/thermal"
+ },
+ {
+   "repository":   "platform/hardware/qcom/sm8150/vr"
+ }
+]
