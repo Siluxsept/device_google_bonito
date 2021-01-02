@@ -161,7 +161,8 @@ PRODUCT_COPY_FILES += \
     device/google/bonito/prebuilts/pixelpowerstats_provider_aidl_interface-cpp.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/pixelpowerstats_provider_aidl_interface-cpp.so \
     device/google/bonito/prebuilts/twrp.flags:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/twrp.flags \
     device/google/bonito/prebuilts/ueventd.rc:$(TARGET_COPY_OUT_RECOVERY)/root/ueventd.rc \
-    device/google/bonito/prebuilts/otacerts.zip:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/security/otacerts.zip
+    device/google/bonito/prebuilts/otacerts.zip:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/security/otacerts.zip \
+    device/google/bonito/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.use_color_management=true
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.protected_contents=true
