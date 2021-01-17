@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# Hack for sdm845 display on R+ which started erroring.
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
 TARGET_COMPILE_WITH_MSM_KERNEL := true
