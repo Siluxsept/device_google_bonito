@@ -17,13 +17,13 @@ PRODUCT_MODEL := Pixel 3a XL
 PRODUCT_BRAND := google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="bonito" \
-    PRIVATE_BUILD_DESC="bonito-user 11 RQ1A.210105.002 6985033 release-keys"
+    PRODUCT_NAME=bonito \
+    PRIVATE_BUILD_DESC="bonito-user 11 RQ1A.210205.004 7038034 release-keys"
 
-BUILD_FINGERPRINT := "google/bonito/bonito:11/RQ1A.210105.002/6985033:user/release-keys"
+BUILD_FINGERPRINT := google/bonito/bonito:11/RQ1A.210205.004/7038034:user/release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=google/bonito/bonito:11/RQ1A.210105.002/6985033:user/release-keys
+    ro.build.fingerprint=google/bonito/bonito:11/RQ1A.210205.004/7038034:user/release-keys
 
 # AICP Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
