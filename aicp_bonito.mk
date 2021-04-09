@@ -29,4 +29,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_BUILD_PROP_OVERRIDES += \
 DEVICE_MAINTAINERS="Ron H. (Siluxsept)"
 
-$(call inherit-product-if-exists, vendor/google/bonito/bonito-vendor.mk)
+$(call inherit-product, vendor/google/bonito/bonito-vendor.mk)
