@@ -21,4 +21,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/sargo/sargo:11/RQ2A.210505.002/7246365:user/release-keys
 
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="Ron H. (Siluxsept)"
+
 $(call inherit-product, vendor/google/sargo/sargo-vendor.mk)
