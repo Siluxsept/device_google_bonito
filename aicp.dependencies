@@ -1,11 +1,11 @@
 [
  {
-  "repository":  "Siluxsept/kernel_google_msm-4.9",
+  "repository":  "AICP/kernel_google_msm-4.9",
   "target_path": "kernel/google/msm-4.9",
   "branch":      "r11.1"
  },
  {
-  "repository":  "Siluxsept/proprietary_vendor_google",
+  "repository":  "AICP/proprietary_vendor_google",
   "target_path": "vendor/google",
   "branch":      "r11.1"
  },
