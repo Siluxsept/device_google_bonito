@@ -369,4 +369,13 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareWakeKeys">64</integer>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">false</bool>
+
+    <!-- Enable Live Display -->
+    <bool name="config_liveDisplayAvailable">true</bool>
+
+    <!-- Enable DT2W -->
+    <bool name="config_supportDoubleTapWake">true</bool>
 </resources>
