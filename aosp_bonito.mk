@@ -56,9 +56,3 @@ PRODUCT_COPY_FILES += \
 ifneq (REL,$(PLATFORM_VERSION_CODENAME))
   PRODUCT_PACKAGES += com.android.vndk.current.on_vendor
 endif
-
-PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := Android
-PRODUCT_NAME := aosp_bonito
-PRODUCT_DEVICE := bonito
-PRODUCT_MODEL := AOSP on bonito
