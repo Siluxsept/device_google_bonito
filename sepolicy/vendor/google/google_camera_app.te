@@ -50,3 +50,6 @@ allow google_camera_app easel_device:chr_file rw_file_perms;
 
 # Allow notifying Perfetto traced daemon that a notable event has occurred.
 unix_socket_connect(google_camera_app, traced_producer, traced)
+
+# kgsl access for AdrenoUtils
+allow google_camera_app sysfs_msm_subsys:dir r_dir_perms;
