@@ -64,6 +64,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
+# Google Camera
+$(call inherit-product, vendor/google/camera/config.mk)
+
 # Elmyra
 PRODUCT_PACKAGES += \
     ElmyraService
