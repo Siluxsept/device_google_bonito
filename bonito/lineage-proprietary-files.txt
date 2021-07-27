@@ -20,6 +20,7 @@ etc/permissions/telephonyservice.xml
 etc/permissions/uimremoteclient.xml
 etc/permissions/uimremoteserver.xml
 etc/permissions/UimService.xml
+etc/sysconfig/whitelist_com.android.omadm.service.xml
 -framework/qcrilhook.jar
 -framework/QtiTelephonyServicelibrary.jar
 -framework/uimremoteclientlibrary.jar
