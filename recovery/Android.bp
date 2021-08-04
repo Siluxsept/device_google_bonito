@@ -15,28 +15,6 @@
 //
 
 cc_library_static {
-    name: "librecovery_ui_bonito",
-    owner: "google",
-    cflags: [
-        "-Wall",
-        "-Wextra",
-        "-Werror",
-        "-pedantic",
-    ],
-    srcs: [
-        "recovery_ui.cpp",
-    ],
-    include_dirs: [
-        "bootable/recovery"
-    ],
-    static_libs: [
-        "libbase",
-        "libnos_for_recovery",
-        "libnos_citadel_for_recovery",
-    ],
-}
-
-cc_library_static {
     name: "librecovery_twrp_bonito",
     owner: "google",
     cflags: [
@@ -60,4 +38,7 @@ cc_library_static {
         "libnos_for_recovery",
         "libnos_citadel_for_recovery",
     ],
+    whole_static_libs: [
+	"libmisc_writer"
+    ]
 }

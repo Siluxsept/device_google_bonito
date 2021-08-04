@@ -1,9 +1,15 @@
+on early-init
+    # Wait to make sure we do not try to talk too early to the display
+    wait /sys/class/drm/card0
+
 on boot
     export LD_CONFIG_FILE /system/bin/ld.config.txt
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    symlink /dev/block/bootdevice/by-name/oem_stanvbk /dev/block/bootdevice/by-name/oem_stanvbk_a
+    symlink /dev/block/bootdevice/by-name/oem_stanvbk /dev/block/bootdevice/by-name/oem_stanvbk_b
 
     chmod 0660 /dev/qseecom
     chown system drmrpc /dev/qseecom
@@ -12,8 +18,14 @@ on fs
     install_keyring
 
 on init
+    # Don't lose recovery logs- keep warm reset for coming out of recovery.
+    write /sys/module/msm_poweroff/parameters/warm_reset 1
     # Enable thermal mitigation
     write /sys/devices/virtual/thermal/tz-by-name/backup-charge/mode enabled
+
+    # Block layer tuning: discard chunk size up to 128MB
+    # Otherwise, contiguous discards can be merged
+    write /sys/block/sda/queue/discard_max_bytes 134217728
     start touchdriver
 
 on property:crypto.ready=0
@@ -50,10 +62,8 @@ on property:prep.decrypt=1
    start time_daemon
    start vendor.citadeld
    start vendor.weaver_hal
-   start vendor.authsecret
-   start vendor.oemlock
    start gatekeeper-1-0
-   start vendor.keymaster-4-0-citadel
+   start vendor.keymaster-4-1-citadel
    start keymaster-4-0
    restart time_daemon
 
@@ -121,7 +131,7 @@ service vendor.oemlock /system/bin/android.hardware.oemlock@1.0-service.citadel
     group root
     seclabel u:r:recovery:s0
 
-service vendor.keymaster-4-0-citadel /system/bin/android.hardware.keymaster@4.0-service.citadel
+service vendor.keymaster-4-1-citadel /system/bin/android.hardware.keymaster@4.1-service.citadel
     disabled
     user root
     group root
