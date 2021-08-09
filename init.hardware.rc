@@ -35,8 +35,9 @@ on property:init.svc.vendor.charger=running
     wait /dev/block/bootdevice
     write /sys/class/typec/port0/port_type sink
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    # Disable sched_boost
-    write /proc/sys/kernel/sched_boost 0
+    # Disable schedtune.boost
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/schedtune.boost 0
     # Enable thermal mitigation
     write /sys/devices/virtual/thermal/tz-by-name/backup-charge/mode enabled
 
@@ -54,8 +55,9 @@ service vendor.charger /system/bin/charger
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chmod 0755 /sys/kernel/debug
-    # Enable sched_boost
-    write /proc/sys/kernel/sched_boost 1
+    # Enable schedtune.boost
+    write /dev/stune/schedtune.boost 50
+    write /dev/stune/schedtune.prefer_idle 1
 
 # Skip init trigger for charger mode
 on early-init && property:ro.boot.mode=charger
@@ -552,8 +554,9 @@ on property:sys.boot_completed=1
     chmod 644 /sys/kernel/debug/mmc0/io_stats
     chmod 644 /sys/kernel/debug/mmc0/req_stats
 
-    # Disable sched_boost
-    write /proc/sys/kernel/sched_boost 0
+    # Disable schedtune.boost
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/schedtune.boost 0
 
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
