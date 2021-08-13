@@ -12,3 +12,4 @@ type nxpnfc_hwservice, hwservice_manager_type;
 type hal_tui_comm_hwservice, hwservice_manager_type;
 type hal_paintbox_hwservice, hwservice_manager_type;
 type hal_wlc_hwservice, hwservice_manager_type;
+type hal_esepowermanager_hwservice, hwservice_manager_type;
