@@ -1,2 +1,6 @@
 # All types in /mnt/vendor/persist
 attribute vendor_persist_type;
+
+attribute hal_esepowermanager;
+attribute hal_esepowermanager_client;
+attribute hal_esepowermanager_server;
