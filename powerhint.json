@@ -365,12 +365,6 @@
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
-      "Node": "SchedBoost",
-      "Duration": 1000,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
       "Node": "L3LittleClusterMinFreq",
       "Duration": 1000,
       "Value": "1440000000"
