@@ -5,3 +5,8 @@ allow platform_app persist_sensors_file:file r_file_perms;
 # To find and bind hal_wlc
 allow platform_app hal_wlc_hwservice:hwservice_manager find;
 allow platform_app hal_wlc:binder call;
+# sysinfo
+allow platform_app sysfs_device_info:file { r_file_perms };
+allow platform_app sysfs_thermal:dir { r_dir_perms };
+allow platform_app sysfs_thermal:file { r_file_perms };
+allow platform_app sysfs_device_info:lnk_file { r_file_perms };

@@ -280,3 +280,6 @@
 
 # vendor-provided system HAL
 /system/bin/hw/hardware\.google\.pixelstats@1\.0-service  u:object_r:pixelstats_system_exec:s0
+
+# sysinfo
+/sys/class/thermal/thermal_zone14/temp u:object_r:sysfs_device_info:s0
