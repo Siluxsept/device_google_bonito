@@ -1,0 +1,12 @@
+[
+ {
+  "repository":  "Siluxsept/kernel_google_msm-4.9",
+  "target_path": "kernel/google/msm-4.9",
+  "branch":      "s12.0"
+ },
+ {
+  "repository":  "LineageOS/android_packages_apps_ElmyraService",
+  "target_path": "packages/apps/ElmyraService",
+  "branch":      "lineage-19.0"
+ }
+]
