@@ -7,6 +7,6 @@
  {
   "repository":  "LineageOS/android_packages_apps_ElmyraService",
   "target_path": "packages/apps/ElmyraService",
-  "branch":      "lineage-19.0"
+  "branch":      "lineage-19.1"
  }
 ]
