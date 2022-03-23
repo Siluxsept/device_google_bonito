@@ -27,4 +27,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := google/bonito/bonito:12/SP2A.220305.012/8177914:user/release-keys
 
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="Ron H. (Siluxsept)"
+
 $(call inherit-product, vendor/google/bonito/bonito-vendor.mk)
