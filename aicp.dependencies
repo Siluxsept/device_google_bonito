@@ -1,6 +1,6 @@
 [
  {
-  "repository":  "Siluxsept/kernel_google_msm-4.9",
+  "repository":  "AICP/kernel_google_msm-4.9",
   "target_path": "kernel/google/msm-4.9",
   "branch":      "s12.1"
  },
