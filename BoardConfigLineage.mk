@@ -18,7 +18,6 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := bonito_defconfig
 TARGET_KERNEL_SOURCE := kernel/google/msm-4.9
 TARGET_NEEDS_DTBOIMAGE := true
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Manifests
 DEVICE_MANIFEST_FILE += device/google/bonito/lineage_manifest.xml
