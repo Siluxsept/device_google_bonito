@@ -28,6 +28,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
 
+# GMS
+WITH_GMS := true
+
 # Google Assistant
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
@@ -160,3 +163,5 @@ PRODUCT_PACKAGES += \
     android.hardware.power-V1-ndk_platform.vendor:64 \
     android.hardware.power.stats-V1-ndk_platform:64 \
     android.hardware.rebootescrow-V1-ndk_platform.vendor:64
+
+include vendor/gapps/arm64/arm64-vendor.mk
