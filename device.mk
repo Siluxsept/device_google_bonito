@@ -432,6 +432,10 @@ PRODUCT_COPY_FILES += \
     device/google/bonito/nfc/com.google.hardware.pixel.japan.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_G020D/com.google.hardware.pixel.japan.xml \
     device/google/bonito/nfc/com.google.hardware.pixel.japan.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_G020H/com.google.hardware.pixel.japan.xml
 
+# Now Playing
+PRODUCT_PACKAGES += \
+    NowPlayingOverlay
+
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.bonito
