@@ -384,4 +384,10 @@
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+
+    <!-- Fingerprint from a certified device against current platform SPL level -->
+    <string name="config_certifiedFingerprint" translatable="false">google/raven/raven:13/TP1A.221005.002/9012097:user/release-keys</string>
+
+    <!-- Model from a certified device -->
+    <string name="config_certifiedModel" translatable="false">Pixel 6 Pro</string>
 </resources>
