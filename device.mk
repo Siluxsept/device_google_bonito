@@ -45,6 +45,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     masterclear.allow_retain_esim_profiles_after_fdr=true
 
 PRODUCT_COPY_FILES += \
+    device/google/bonito/ih8sn.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/ih8sn.conf \
     device/google/bonito/default-permissions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/default-permissions.xml \
     device/google/bonito/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
