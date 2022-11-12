@@ -23,7 +23,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS="Ron H. (Siluxsept)" \
-    TARGET_PRODUCT==bonito \
+    TARGET_PRODUCT=bonito \
     PRIVATE_BUILD_DESC="bonito-user 12 SP2A.220505.008 8782922 release-keys"
 
 BUILD_FINGERPRINT := google/bonito/bonito:12/SP2A.220505.008/8782922:user/release-keys
