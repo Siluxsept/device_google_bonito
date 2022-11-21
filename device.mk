@@ -70,6 +70,7 @@ endif
 LOCAL_PATH := device/google/bonito
 
 TARGET_PRODUCT_PROP := $(LOCAL_PATH)/product.prop
+TARGET_SYSTEM_EXT_PROP := $(LOCAL_PATH)/system_ext.prop
 
 $(call inherit-product, $(LOCAL_PATH)/utils.mk)
 
